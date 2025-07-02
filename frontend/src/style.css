@@ -1,0 +1,270 @@
+/* Marrom escuro (#4B2E2B) → Café
+
+Bege claro (#F4EDE4) → Leite, aconchego
+
+Verde musgo (#8A9A5B) → Natureza, vida
+
+Branco (#FFFFFF) → Limpeza, leveza 
+
+Marrom claro (#d2691e)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --titulo: "Playfair Display", "Montserrat";
+    --text: "Open Sans", "Roboto;";
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--text);
+    background-color: #F4EDE4;
+    gap: 20px;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    font-family: var(--titulo);
+    font-size: 16px;
+    letter-spacing: 2px;
+    background: linear-gradient(180deg, #000000, transparent);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header .logo {
+    font-family: var(--titulo);
+    font-size: 32px;
+    font-weight: 800;
+    color: #d2691e;
+    transition: 0.5s;
+}
+
+header .logo:hover {
+    transform: scale(1.2);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    width: 35vw;
+    overflow-y: hidden;
+    flex-direction: row;
+    gap: 40px;
+}
+
+header nav a {
+    color: #F4EDE4;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    transform: scale(1.2);
+    text-decoration: underline 1.5px #d2691e;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    background-image: url(img/background.jpg);
+    background-position: bottom;
+    background-size: cover;
+    font-family: var(--text);
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    height: 100vh;
+    width: 100vw;
+    padding: 100px 100px;
+}
+
+.banner .logo {
+    color: #d2691e;
+    font-family: var(--titulo);
+    font-weight: 800;
+    font-size: 32px;
+    margin: 0px 20px;
+}
+
+.banner .slogan {
+    margin: 0px 10px;
+}
+
+.banner .btn {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: #8A9A5B;
+    color: #000000;
+    font-family: var(--titulo);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner .btn:hover {
+    transform: scale(1.1);
+    background-color: rgb(119, 133, 78);
+}
+
+.sobre {
+    padding: 60px 20px;
+    background-color: #fff;
+    color: #4b2e2b;
+    border-radius: 25px;
+}
+
+.sobre .title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #8a9a5b;
+}
+
+.container-sobre {
+    max-width: 1200px;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    font-family: var(--text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.container-sobre .imagem-sobre {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.container-sobre img {
+    max-width: 70%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.container-sobre .texto-sobre {
+    flex: 1 1 500px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.cardapio {
+  padding: 50px 20px;
+  background-color: #f4ede4;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 3s;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #8a9a5b;
+  border-radius: 12px;
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #4b2e2b;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card .preco {
+  font-weight: bold;
+  color: #8a9a5b;
+}
+
+
+.contato {
+    background-color: #4B2E2B;
+    color: #F4EDE4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    gap: 10px;
+    padding: 15px;
+}
+.contato h2 {
+    font-family: var(--titulo);
+    letter-spacing: 2px;
+}
+
+.contato .link {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.contato i {
+    color: #d2691e;
+    font-size: 24px;
+}
+
+.contato .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 400;
+}
+
+.contato .info a {
+    color: #ffff;
+}

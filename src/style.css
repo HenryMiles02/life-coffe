@@ -204,12 +204,15 @@ header nav a:hover {
 }
 
 .card {
-  background-color: #fff;
-  border: 2px solid #8a9a5b;
-  border-radius: 12px;
-  width: 250px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+    border: 2px solid #8a9a5b;
+    border-radius: 12px;
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h3 {
